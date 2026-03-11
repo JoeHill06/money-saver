@@ -14,9 +14,16 @@ git commit -m "your message"
 git push
 ```
 
-**2. Pull and restart on the Pi (on your laptop):**
+**2a. Pull and restart on the Pi (from your laptop):**
 ```bash
 ssh joehill@joespi.local "cd money-saver && git pull && sudo systemctl restart money-saver"
+```
+
+**2b. Pull and restart on the Pi (if already SSH'd in):**
+```bash
+cd ~/money-saver
+git pull
+sudo systemctl restart money-saver
 ```
 
 ---
