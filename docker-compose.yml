@@ -1,0 +1,10 @@
+services:
+  money-saver:
+    build: .
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./finance.db:/app/finance.db
+    restart: always
